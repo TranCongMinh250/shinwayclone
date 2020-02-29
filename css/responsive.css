@@ -81,7 +81,7 @@ html {
 body {
   line-height: 1.4;
   font-weight: 500;
-  font-family: "utm_avoregular";
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--third-color);
 }
 
@@ -129,7 +129,6 @@ img {
   color: var(--gray-light);
   background: url(../images/bg-introduction.jpg);
   background-position: 0 0;
-  background-size: cover;
   background-attachment: fixed;
 }
 .header__content {
@@ -1084,119 +1083,162 @@ img {
   opacity: 1;
   visibility: visible;
 }
-.gallery__modal {
-  display: none;
-  position: fixed;
-  z-index: 200;
-  padding-top: 5%;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-@media only screen and (min-width: 320px) and (max-width: 374px) {
-  .gallery__modal {
-    padding-top: 60%;
-  }
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-  .gallery__modal {
-    padding-top: 60%;
-  }
-}
-@media only screen and (min-width: 425px) and (max-width: 499px) {
-  .gallery__modal {
-    padding-top: 40%;
-  }
-}
-@media only screen and (min-width: 500px) and (max-width: 767px) {
-  .gallery__modal {
-    padding-top: 15%;
-  }
-}
-.gallery__modal--content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 2% 2.5%;
-  border-radius: 1rem;
-  border: 1px solid #888;
-  max-width: 60%;
-}
-@media only screen and (min-width: 320px) and (max-width: 374px) {
-  .gallery__modal--content {
-    max-width: 90%;
-  }
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-  .gallery__modal--content {
-    max-width: 90%;
-  }
-}
-@media only screen and (min-width: 425px) and (max-width: 499px) {
-  .gallery__modal--content {
-    max-width: 90%;
-  }
-}
-@media only screen and (min-width: 500px) and (max-width: 767px) {
-  .gallery__modal--content {
-    max-width: 80%;
-  }
-}
-.gallery__modal--content i {
-  font-size: 3rem;
-}
-.gallery__modal--arrowback {
-  position: absolute;
-  border-radius: 1rem 0 0 1rem;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 4%;
-  height: 100%;
-}
-.gallery__modal--arrowback i {
-  position: absolute;
-  font-size: 4rem;
-  top: 50%;
-  left: 30%;
-}
-.gallery__modal--arrowback:hover {
-  background-image: linear-gradient(to right, var(--third-color), var(--gray-light));
-}
-.gallery__modal--arrowback:hover i {
-  color: white;
-}
-.gallery__modal--arrowforward {
-  position: absolute;
-  border-radius: 0 1rem 1rem 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 4%;
-  height: 100%;
-}
-.gallery__modal--arrowforward i {
-  position: absolute;
-  font-size: 4rem;
-  top: 50%;
-  right: 30%;
-}
-.gallery__modal--arrowforward:hover {
-  background-image: linear-gradient(to left, var(--third-color), var(--gray-light));
-}
-.gallery__modal--arrowforward:hover i {
-  color: white;
-}
 .gallery__img--big {
   display: none;
 }
 .gallery__img--list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.modal__close {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal__open {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-height: 100%;
+  width: 90%;
+  padding: 0 2.5rem;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  z-index: 201;
+  background-color: whitesmoke;
+  border-radius: 1.5rem;
+}
+@media only screen and (min-width: 425px) and (max-width: 499px) {
+  .modal__open {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .modal__open {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .modal__open {
+    width: 80%;
+    padding: 0 4rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+  .modal__open {
+    width: 80%;
+    padding: 0 4rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .modal__open {
+    width: 78%;
+    padding: 0 4rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .modal__open {
+    width: 70%;
+    padding: 0rem;
+  }
+}
+.modal__open--content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__open--arrowleft {
+  position: absolute;
+  border-radius: 1rem 0 0 1rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6%;
+  height: 100%;
+}
+.modal__open--arrowleft i {
+  color: var(--primary-color);
+  position: absolute;
+  font-size: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .modal__open--arrowleft i {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .modal__open--arrowleft i {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 499px) {
+  .modal__open--arrowleft i {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .modal__open--arrowleft i {
+    font-size: 2.7rem;
+  }
+}
+.modal__open--arrowleft:hover {
+  background-image: linear-gradient(to right, var(--third-color), var(--gray-light));
+}
+.modal__open--arrowleft:hover i {
+  color: white;
+}
+.modal__open--arrowright {
+  position: absolute;
+  border-radius: 0 1rem 1rem 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 6%;
+  height: 100%;
+}
+.modal__open--arrowright i {
+  color: var(--primary-color);
+  position: absolute;
+  font-size: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .modal__open--arrowright i {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .modal__open--arrowright i {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 499px) {
+  .modal__open--arrowright i {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .modal__open--arrowright i {
+    font-size: 2.7rem;
+  }
+}
+.modal__open--arrowright:hover {
+  background-image: linear-gradient(to left, var(--third-color), var(--gray-light));
+}
+.modal__open--arrowright:hover i {
+  color: white;
 }
 
 .statistic {

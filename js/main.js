@@ -302,54 +302,72 @@ document.addEventListener(
 
     // Modal Gallery //////////////////////////////////////////
     let galleryItem = document.querySelectorAll(".gallery__item");
+    let galleryImg = document.querySelectorAll(".gallery__img");
     let galleryImgItem = document.querySelectorAll(".gallery__img--item");
 
-    let galleryModal = document.querySelector(".gallery__modal");
-    let galleryModalImg = document.querySelector(".gallery__modal--img");
-    let galleryClose = document.getElementsByClassName("close")[0];
+    let modalClose = document.querySelector(".modal__close");
+    let modalOpen = document.querySelector(".modal__open");
+    let modalOpenImg = document.querySelector(".modal__open--img");
 
-    let galleryModalArrowback = document.querySelector(
-      ".gallery__modal--arrowback"
+    let modalOpenArrowLeft = document.querySelector(
+      ".modal__open--arrowleft"
     );
-    let galleryModalArrowforward = document.querySelector(
-      ".gallery__modal--arrowforward"
+    let modalOpenArrowRight = document.querySelector(
+      ".modal__open--arrowright"
     );
 
     for (let i = 0; i < galleryItem.length; i++) {
-      galleryItem[i].addEventListener("click", function() {
-        galleryModal.style.display = "block";
-        galleryModalImg.src = galleryImgItem[i].src;
-        galleryModalArrowback.style.display = "block";
-        galleryModalArrowforward.style.display = "block";
-        let j = i;
-        galleryModalArrowback.addEventListener("click", function() {
-          console.log("back" + j);
-          j--;
-          galleryModalArrowforward.style.display = "block";
-          if (j < 1) {
-            galleryModalArrowback.style.display = "none";
-            j = 0;
-          }
-          galleryModalImg.src = galleryImgItem[j].src;
-        });
-        galleryModalArrowforward.addEventListener("click", function() {
-          console.log("forward" + j);
-          j++;
-          galleryModalArrowback.style.display = "block";
-          if (j > galleryItem.length - 2) {
-            galleryModalArrowforward.style.display = "none";
-            j = galleryItem.length - 1;
-          }
-          galleryModalImg.src = galleryImgItem[j].src;
-        });
-      });
+      galleryItem[i].addEventListener("click",function(){
+        modalOpenArrowLeft.style.visibility = "visible";
+        modalOpenArrowRight.style.visibility = "visible";
+        modalClose.style.display = "block";
+        modalOpen.style.display = "block";
+        modalOpenImg.src = galleryImgItem[galleryImgItem[i].getAttribute("data-number")-1].src;
+        modalOpenImg.dataset.number = galleryImgItem[i].getAttribute("data-number")-1;
+        if (i==0){
+          modalOpenArrowLeft.style.visibility = "hidden";
+        }
+        if (i==galleryItem.length-1){
+          modalOpenArrowRight.style.visibility = "hidden";
+        }
+      })
     }
-
-    window.addEventListener("click",function() {
-      if (event.target == galleryModal) {
-        galleryModal.style.display = "none";
+    // click Arrow Left, Right in Modal Img
+    modalOpenArrowLeft.addEventListener("click",function (){
+      let k = modalOpenImg.getAttribute("data-number");
+      k--;
+      if (k==0){
+        modalOpenArrowLeft.style.visibility = "hidden";
+        modalOpenImg.src = galleryImgItem[k].src;
+        modalOpenImg.dataset.number = k;
       }
-    });
+      else {
+        modalOpenArrowRight.style.visibility = "visible";
+        modalOpenImg.src = galleryImgItem[k].src;
+        modalOpenImg.dataset.number = k;
+        console.log(k);
+      }
+    })
+    modalOpenArrowRight.addEventListener("click",function (){
+      let k = modalOpenImg.getAttribute("data-number");
+      k++;
+      if (k===galleryItem.length-1){
+        modalOpenArrowRight.style.visibility = "hidden";
+        modalOpenImg.src = galleryImgItem[k].src;
+        modalOpenImg.dataset.number = k;
+      }
+      else {
+        modalOpenArrowLeft.style.visibility = "visible";
+        
+        modalOpenImg.src = galleryImgItem[k].src;
+        modalOpenImg.dataset.number = k;
+        console.log(k);
+      }
+    })
+    modalClose.addEventListener("click",function(){
+      modalClose.style.display = "none";
+      modalOpen.style.display = "none";
+    })
     // End Modal Gallery //////////////////////////////////////
   },
   false

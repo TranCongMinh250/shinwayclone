@@ -110,7 +110,7 @@ html {
 body {
   line-height: 1.4;
   font-weight: 500;
-  font-family: "utm_avoregular";
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--third-color);
 }
 h1,
@@ -152,7 +152,7 @@ img {
   color: var(--gray-light);
   background: url(../images/bg-introduction.jpg);
   background-position: 0 0;
-  background-size: cover;
+  // background-size: cover;
   background-attachment: fixed;
   &__content {
     visibility: hidden;
@@ -973,74 +973,105 @@ img {
       }
     }
   }
-  &__modal {
+
+  &__img {
+    &--big {
+      display: none;
+    }
+    &--list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+// Modal Gallery Img
+.modal {
+  &__close {
     display: none;
     position: fixed;
-    z-index: 200;
-    padding-top: 5%;
-    left: 0;
     top: 0;
-    right: 0;
+    left: 0;
     bottom: 0;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-    @include responsive_320 {
-      padding-top: 60%;
+    right: 0;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &__open {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-height: 100%;
+    width: 90%;
+    padding: 0 2.5rem;
+    @include responsive_425{
+    padding: 0 3rem;
+      
     }
+    @include responsive_500{
+    padding: 0 3.5rem;
+      
+    }
+    @include responsive_768 {
+      width: 80%;
+    padding: 0 4rem;
 
-    @include responsive_375 {
-      padding-top: 60%;
     }
+    @include responsive_992 {
+      width: 80%;
+    padding: 0 4rem;
 
-    @include responsive_425 {
-      padding-top: 40%;
     }
+    @include responsive_1024 {
+      width: 78%;
+    padding: 0 4rem;
 
-    @include responsive_500 {
-      padding-top: 15%;
     }
+    @include responsive_1440 {
+      width: 70%;
+    padding: 0rem;
+
+    }
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    z-index: 201;
+    background-color: whitesmoke;
+    border-radius: 1.5rem;
+
     &--content {
-      position: relative;
-      // display: flex;
-      // align-items: center;
-      background-color: #fefefe;
-      margin: auto;
-      padding: 2% 2.5%;
-      border-radius: 1rem;
-      border: 1px solid #888;
-      max-width: 60%;
-      @include responsive_320 {
-        max-width: 90%;
-      }
-
-      @include responsive_375 {
-        max-width: 90%;
-      }
-
-      @include responsive_425 {
-        max-width: 90%;
-      }
-      @include responsive_500 {
-        max-width: 80%;
-      }
-      i {
-        font-size: 3rem;
-        // margin: 0 2%;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    &--arrowback {
+    &--arrowleft {
       position: absolute;
       border-radius: 1rem 0 0 1rem;
       top: 0;
       bottom: 0;
       left: 0;
-      width: 4%;
+      width: 6%;
       height: 100%;
       i {
+        color: var(--primary-color);
         position: absolute;
         font-size: 4rem;
         top: 50%;
-        left: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include responsive_320 {
+          font-size: 2.2rem;
+        }
+
+        @include responsive_375 {
+          font-size: 2.5rem;
+        }
+
+        @include responsive_425 {
+          font-size: 2.7rem;
+        }
+        @include responsive_500 {
+          font-size: 2.7rem;
+        }
       }
       &:hover {
         background-image: linear-gradient(
@@ -1053,19 +1084,35 @@ img {
         }
       }
     }
-    &--arrowforward {
+    &--arrowright {
       position: absolute;
       border-radius: 0 1rem 1rem 0;
       top: 0;
       bottom: 0;
       right: 0;
-      width: 4%;
+      width: 6%;
       height: 100%;
       i {
+        color: var(--primary-color);
         position: absolute;
         font-size: 4rem;
         top: 50%;
-        right: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include responsive_320 {
+          font-size: 2.2rem;
+        }
+
+        @include responsive_375 {
+          font-size: 2.5rem;
+        }
+
+        @include responsive_425 {
+          font-size: 2.7rem;
+        }
+        @include responsive_500 {
+          font-size: 2.7rem;
+        }
       }
       &:hover {
         background-image: linear-gradient(
@@ -1077,15 +1124,6 @@ img {
           color: white;
         }
       }
-    }
-  }
-  &__img {
-    &--big {
-      display: none;
-    }
-    &--list {
-      display: flex;
-      flex-wrap: wrap;
     }
   }
 }
