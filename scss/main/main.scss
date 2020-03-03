@@ -1,0 +1,30 @@
+// --------------- MAIN ---------------- //
+
+@import "../helpers/mixins";
+@import "../helpers/variables";
+@import "../base/base-setup";
+
+
+@import "../base/ultilities";
+@import "../layout/overall-layout";
+
+@import "../components/button";
+
+@import "../pages/header";
+@import "../pages/nav";
+@import "../pages/navscroll";
+@import "../pages/service";
+@import "../pages/quotes";
+@import "../pages/introduce";
+@import "../pages/chart";
+@import "../pages/projects";
+@import "../pages/gallery";
+@import "../pages/modal";
+@import "../pages/statistic";
+@import "../pages/process";
+@import "../pages/map";
+@import "../pages/logo";
+@import "../pages/contact";
+@import "../pages/footer";
+
+@import "../animation/main-animation";

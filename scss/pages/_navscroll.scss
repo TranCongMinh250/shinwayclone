@@ -1,0 +1,40 @@
+// --------------- FOOTER ---------------- //
+
+.navscroll {
+  padding: 1rem 0;
+  // margin-bottom: 10rem;
+  background-color: #e8e8e8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  .nav__logo {
+    img {
+      width: 60%;
+    }
+  }
+  .nav__nav--link {
+    @include responsive_320 {
+      padding: 0;
+      font-size: 3rem;
+      color: var(--gray-light);
+    }
+
+    @include responsive_375 {
+      padding: 0;
+      font-size: 3rem;
+      color: var(--gray-light);
+    }
+
+    @include responsive_425 {
+      padding: 0;
+      font-size: 3rem;
+      color: var(--gray-light);
+    }
+
+    @include responsive_500 {
+      padding: 0;
+      font-size: 3rem;
+      color: var(--gray-light);
+    }
+  }
+}

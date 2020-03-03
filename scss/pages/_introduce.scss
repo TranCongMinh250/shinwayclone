@@ -1,0 +1,136 @@
+// --------------- INTRODUCE ---------------- //
+
+.introduce {
+  visibility: hidden;
+  text-align: center;
+  padding: 7rem 0;
+  &__content {
+    padding-top: 3rem;
+  }
+  &__title {
+    span {
+      color: var(--primary-color);
+    }
+    @include responsive_320 {
+      font-weight: bold;
+    }
+    @include responsive_375 {
+      font-weight: bold;
+    }
+    @include responsive_425 {
+      font-weight: bold;
+    }
+    @include responsive_500 {
+      font-weight: bold;
+    }
+  }
+  &__desc {
+    font-size: 1.6rem;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem 0 5.5rem;
+    @include responsive_320 {
+      padding: 1.5rem 0 0rem;
+    }
+    @include responsive_375 {
+      padding: 1.5rem 0 0rem;
+    }
+    @include responsive_425 {
+      padding: 1.5rem 0 0rem;
+    }
+    @include responsive_500 {
+      padding: 1.5rem 0 0rem;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    @include responsive_320 {
+      flex-direction: column;
+    }
+    @include responsive_375 {
+      flex-direction: column;
+    }
+    @include responsive_425 {
+      flex-direction: column;
+    }
+    @include responsive_500 {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    max-width: 32%;
+    @include responsive_320 {
+      max-width: 100%;
+      margin-top: 5rem;
+    }
+    @include responsive_375 {
+      max-width: 100%;
+      margin-top: 5rem;
+    }
+    @include responsive_425 {
+      max-width: 100%;
+      margin-top: 5rem;
+    }
+    @include responsive_500 {
+      max-width: 100%;
+      margin-top: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    i {
+      @include responsive_500 {
+        margin: -30px 2rem 0;
+        width: 11rem;
+        padding: 1.5rem;
+      }
+      display: block;
+      width: 6.2rem;
+      border: 0.1rem solid black;
+      padding: 1.3rem;
+      border-radius: 50%;
+      font-size: 3rem;
+      margin: 0 auto;
+      transition: all 0.4s;
+      cursor: pointer;
+      &:hover {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+    }
+    &--content {
+      @include responsive_425 {
+        margin: 0 2rem;
+      }
+      @include responsive_500 {
+        margin-right: 2rem;
+        text-align: left;
+      }
+      h3 {
+        font-size: 2.4rem;
+        margin: 2.5rem 0 1rem;
+        color: var(--primary-color);
+        @include responsive_320 {
+          margin: 1rem 0 1rem;
+          font-weight: bold;
+        }
+        @include responsive_375 {
+          margin: 1rem 0 1rem;
+          font-weight: bold;
+        }
+        @include responsive_425 {
+          margin: 1rem 0 1rem;
+          font-weight: bold;
+        }
+        @include responsive_500 {
+          margin: 1rem 0 1rem;
+          font-weight: bold;
+        }
+      }
+      p {
+        line-height: 2.2rem;
+      }
+    }
+  }
+}

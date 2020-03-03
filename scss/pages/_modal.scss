@@ -1,0 +1,144 @@
+// --------------- MODAL GALLERY IMG ---------------- //
+
+.modal {
+    &__close {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 200;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    &__open {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      max-height: 100%;
+      width: 90%;
+      padding: 0 2.5rem;
+      @include responsive_425{
+      padding: 0 3rem;
+        
+      }
+      @include responsive_500{
+      padding: 0 3.5rem;
+        
+      }
+      @include responsive_768 {
+        width: 80%;
+      padding: 0 4rem;
+  
+      }
+      @include responsive_992 {
+        width: 80%;
+      padding: 0 4rem;
+  
+      }
+      @include responsive_1024 {
+        width: 78%;
+      padding: 0 4rem;
+  
+      }
+      @include responsive_1440 {
+        width: 70%;
+      padding: 0rem;
+  
+      }
+      transform: translate(-50%, -50%);
+      transition: all 0.5s;
+      z-index: 201;
+      background-color: whitesmoke;
+      border-radius: 1.5rem;
+  
+      &--content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &--arrowleft {
+        position: absolute;
+        border-radius: 1rem 0 0 1rem;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 6%;
+        height: 100%;
+        i {
+          color: var(--primary-color);
+          position: absolute;
+          font-size: 4rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include responsive_320 {
+            font-size: 2.2rem;
+          }
+  
+          @include responsive_375 {
+            font-size: 2.5rem;
+          }
+  
+          @include responsive_425 {
+            font-size: 2.7rem;
+          }
+          @include responsive_500 {
+            font-size: 2.7rem;
+          }
+        }
+        &:hover {
+          background-image: linear-gradient(
+            to right,
+            var(--third-color),
+            var(--gray-light)
+          );
+          i {
+            color: white;
+          }
+        }
+      }
+      &--arrowright {
+        position: absolute;
+        border-radius: 0 1rem 1rem 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 6%;
+        height: 100%;
+        i {
+          color: var(--primary-color);
+          position: absolute;
+          font-size: 4rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include responsive_320 {
+            font-size: 2.2rem;
+          }
+  
+          @include responsive_375 {
+            font-size: 2.5rem;
+          }
+  
+          @include responsive_425 {
+            font-size: 2.7rem;
+          }
+          @include responsive_500 {
+            font-size: 2.7rem;
+          }
+        }
+        &:hover {
+          background-image: linear-gradient(
+            to left,
+            var(--third-color),
+            var(--gray-light)
+          );
+          i {
+            color: white;
+          }
+        }
+      }
+    }
+  }

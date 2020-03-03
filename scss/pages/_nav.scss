@@ -1,0 +1,212 @@
+// --------------- NAV ---------------- //
+
+.activenav {
+    color: var(--primary-color);
+    border-bottom: 0.2rem solid var(--primary-color);
+  }
+.nav {
+  z-index: 99;
+  background-color: #f8f8f8;
+  border: 1px solid var(--gray-light);
+  padding: 2rem 0;
+  transition: all 0.5s;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    @include responsive_320 {
+      img {
+        margin-left: 10%;
+        width: 60%;
+      }
+    }
+    @include responsive_375 {
+      img {
+        margin-left: 10%;
+        width: 60%;
+      }
+    }
+    @include responsive_425 {
+      img {
+        margin-left: 10%;
+        width: 60%;
+      }
+    }
+    @include responsive_500 {
+      img {
+        margin-left: 10%;
+        width: 60%;
+      }
+    }
+    @include responsive_768 {
+      img {
+        margin-left: 10%;
+        width: 80%;
+      }
+    }
+  }
+  &__mobile {
+    padding: 0.5rem 1rem;
+    color: var(--gray-light);
+    background: var(--primary-color);
+    border-radius: 1rem;
+    cursor: pointer;
+    display: none;
+    @include responsive_320 {
+      display: block;
+      font-size: 4rem;
+      margin-right: 3%;
+    }
+    @include responsive_375 {
+      display: block;
+      font-size: 4rem;
+      margin-right: 3%;
+    }
+    @include responsive_425 {
+      display: block;
+      font-size: 4.5rem;
+      margin-right: 3%;
+    }
+    @include responsive_500 {
+      display: block;
+      font-size: 4.5rem;
+      margin-right: 3%;
+    }
+  }
+  .is-active {
+    transition: 0.4s;
+    transform: translateX(0%);
+  }
+  &__nav {
+    @include responsive_320 {
+      transition: 0.4s;
+      transform: translateX(-102%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 50%;
+      height: 100vh;
+      background: #6fc3e2;
+      border: 1px solid black;
+      padding: 3rem 4rem;
+    }
+    @include responsive_375 {
+      transition: 0.4s;
+      transform: translateX(-102%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 50%;
+      height: 100vh;
+      background: #6fc3e2;
+      border: 1px solid black;
+      padding: 3rem 5rem;
+    }
+    @include responsive_425 {
+      transition: 0.4s;
+      transform: translateX(-102%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 50%;
+      height: 100vh;
+      background: #6fc3e2;
+      border: 1px solid black;
+      padding: 3rem 5rem;
+    }
+    @include responsive_500 {
+      transition: 0.4s;
+      transform: translateX(-102%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 50%;
+      height: 100vh;
+      background: #6fc3e2;
+      border: 1px solid black;
+      padding: 3rem 5rem;
+    }
+    &--list {
+      display: flex;
+      @include responsive_320 {
+        flex-direction: column;
+      }
+
+      @include responsive_375 {
+        flex-direction: column;
+      }
+
+      @include responsive_425 {
+        flex-direction: column;
+      }
+
+      @include responsive_500 {
+        flex-direction: column;
+      }
+    }
+    &--item {
+      @include responsive_320 {
+        padding: 0.5rem;
+      }
+
+      @include responsive_375 {
+        padding: 0.5rem;
+      }
+
+      @include responsive_425 {
+        padding: 0.5rem;
+      }
+
+      @include responsive_500 {
+        padding: 0.5rem;
+      }
+    }
+    &--link {
+      padding: 1.7rem 2.3rem;
+      @include responsive_320 {
+        padding: 0;
+        font-size: 3rem;
+        color: var(--gray-light);
+      }
+
+      @include responsive_375 {
+        padding: 0;
+        font-size: 3rem;
+        color: var(--gray-light);
+      }
+
+      @include responsive_425 {
+        padding: 0;
+        font-size: 3rem;
+        color: var(--gray-light);
+      }
+
+      @include responsive_500 {
+        padding: 0;
+        font-size: 3rem;
+        color: var(--gray-light);
+      }
+      &:hover {
+        color: var(--primary-color);
+      }
+      @include responsive_768 {
+        font-size: 1.6rem;
+      }
+    }
+    &--translate {
+      // padding: 1.7rem;
+      overflow: hidden;
+      height: 3rem;
+      // width: 15rem;
+    }
+  }
+  select {
+    margin-left: 1.5rem;
+  }
+}

@@ -1,0 +1,45 @@
+// --------------- HEADER ---------------- //
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--gray-light);
+  background: url(../../images/bg-introduction.jpg);
+  background-position: 0 0;
+  // background-size: cover;
+  background-attachment: fixed;
+  &__content {
+    visibility: hidden;
+    text-align: center;
+    &--slogan {
+      color: var(--gray-light);
+      span {
+        color: var(--primary-color);
+      }
+    }
+    &--title {
+      font-size: 2.4rem;
+      margin-top: 2.5rem;
+      margin-bottom: 3.5rem;
+      line-height: 1;
+      color: var(--gray-light);
+    }
+    &--describe {
+      width: 70%;
+      margin: 0 auto;
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+      color: var(--gray-light);
+    }
+  }
+  &__button {
+    visibility: hidden;
+    text-align: center;
+    & a {
+      margin-top: 2%;
+    }
+  }
+}

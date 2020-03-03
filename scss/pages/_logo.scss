@@ -1,0 +1,23 @@
+// --------------- LOGO ---------------- //
+
+.logo {
+    &__content {
+      overflow-x: hidden;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2% 0;
+      transition: all 1.5s;
+      transition-delay: 0.5s;
+    }
+    &__item {
+      text-align: center;
+      width: 25%;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+  
+  

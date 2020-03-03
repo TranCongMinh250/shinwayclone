@@ -1,0 +1,19 @@
+// --------------- animatedBackground ---------------- //
+
+.animatedBackground {
+    @keyframes animatedBackground {
+      0% {
+        background-position: 0;
+      }
+      50% {
+        background-position: -192rem;
+      }
+      100% {
+        background-position: 0;
+      }
+    }
+    -webkit-animation: animatedBackground 100s linear infinite;
+    -moz-animation: animatedBackground 100s linear infinite;
+    -o-animation: animatedBackground 100s linear infinite;
+    animation: animatedBackground 100s linear infinite;
+  }

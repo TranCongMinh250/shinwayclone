@@ -1,0 +1,123 @@
+// --------------- PROCESS ---------------- //
+
+.process {
+    visibility: hidden;
+    padding: 7rem 0;
+    &__content {
+      padding-top: 3rem;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__line {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -0.15rem;
+      width: 0.3rem; // or transform: translateX(-50%);
+      margin-top: 0.5rem;
+      background: var(--primary-color);
+      @include responsive_320 {
+        left: 0%;
+        bottom: 5%;
+      }
+  
+      @include responsive_375 {
+        left: 0%;
+        bottom: 5%;
+      }
+  
+      @include responsive_425 {
+        left: 0%;
+      }
+    }
+    &__list {
+      position: relative;
+      margin: 0 10%;
+    }
+    &__item {
+      display: flex;
+      margin: 5% auto;
+      @include responsive_320 {
+        margin: 7rem 0;
+      }
+  
+      @include responsive_375 {
+        margin: 7rem 0;
+      }
+  
+      @include responsive_425 {
+        margin: 7rem 0;
+      }
+      &:nth-of-type(2n-1) {
+        flex-direction: row;
+        text-align: right;
+        @include responsive_320 {
+          flex-direction: row-reverse;
+          text-align: left;
+        }
+  
+        @include responsive_375 {
+          flex-direction: row-reverse;
+  
+          text-align: left;
+        }
+  
+        @include responsive_425 {
+          flex-direction: row-reverse;
+  
+          text-align: left;
+        }
+      }
+      &:nth-of-type(2n) {
+        flex-direction: row-reverse;
+        text-align: left;
+      }
+      &--timeline {
+        width: 42%;
+        @include responsive_320 {
+          width: 85%;
+        }
+  
+        @include responsive_375 {
+          width: 85%;
+        }
+  
+        @include responsive_425 {
+          width: 85%;
+        }
+      }
+      &--icon {
+        margin-top: 0.5rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        border: 0.2rem solid var(--primary-color);
+        text-align: center;
+        background-color: white;
+        i {
+          font-size: 3rem;
+          line-height: 6rem;
+          color: var(--primary-color);
+        }
+        @include responsive_320 {
+          left: 0%;
+        }
+  
+        @include responsive_375 {
+          left: 0%;
+        }
+  
+        @include responsive_425 {
+          left: 0%;
+        }
+      }
+    }
+  }
+  
+  

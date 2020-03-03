@@ -1,0 +1,21 @@
+// --------------- MAP ---------------- //
+
+.map {
+    position: relative;
+    iframe {
+      height: 80vh;
+      width: 100%;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      height: 0.5rem;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary-color);
+    }
+    // background: url(../../images/map.JPG);
+  }
+  
+  

@@ -63,7 +63,6 @@ document.addEventListener(
     let wrapper = document.querySelector(".wrapper");
     // nav__mobile click 
     navMobile.addEventListener("click",function(){
-      // wrapper.classList.toggle("movewrapper");
       navNav.classList.toggle("is-active");
     })
     // Scroll page

@@ -1,0 +1,20 @@
+// --------------- BUTTON ---------------- //
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    width: 17rem;
+    padding: 1.2rem 0;
+    margin: 0 1.5rem;
+    font-size: 1.6rem;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: 0.5s background linear;
+    color: var(--gray-light);
+    &--border {
+      border: 2px solid var(--primary-color);
+      border-radius: 4rem;
+    }
+    &:hover {
+      background: var(--primary-color);
+    }
+  }

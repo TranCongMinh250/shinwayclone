@@ -1,0 +1,67 @@
+// --------------- QUOTES ---------------- //
+
+.quotes {
+  background-image: url(../../images/bg-parnerts-talk.jpg);
+  background-attachment: fixed;
+  background-position: 40% 50%;
+  // background-size: cover;
+  padding: 7rem 0;
+  &__content {
+    @include responsive_320 {
+      width: 100%;
+      margin: 0 0;
+    }
+    @include responsive_375 {
+      width: 100%;
+      margin: 0 0;
+    }
+    @include responsive_425 {
+      width: 100%;
+      margin: 0 0;
+    }
+    @include responsive_500 {
+      width: 100%;
+      margin: 0 0;
+    }
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      cursor: pointer;
+      font-size: 3.5rem;
+      color: var(--gray-dark);
+      &:hover {
+        color: var(--gray-light);
+      }
+    }
+  }
+  &__slider {
+    overflow-x: hidden;
+    margin: 0 3%;
+    &--list {
+      display: flex;
+      transition: all 1s;
+    }
+    &--item {
+      width: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      text-align: center;
+      i {
+        cursor: auto;
+        font-size: 4rem;
+        color: var(--gray-light);
+      }
+      h3 {
+        margin: 3rem 0 4rem;
+        color: var(--gray-light);
+        font-size: 2.6rem;
+      }
+      p {
+        color: var(--gray-dark);
+      }
+    }
+  }
+}

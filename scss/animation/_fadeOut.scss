@@ -1,0 +1,18 @@
+// --------------- fadeOut ---------------- //
+
+.fadeOut {
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+  
+      100% {
+        opacity: 0;
+      }
+    }
+    -webkit-animation: fadeOut 1s;
+    -moz-animation: fadeOut 1s;
+    -o-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+    visibility: visible;
+  }

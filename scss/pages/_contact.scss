@@ -1,0 +1,226 @@
+// --------------- CONTACT ---------------- //
+
+.contact {
+    padding: 7rem 0;
+    background-image: url(../../images/bg-contact.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    // background-size: cover;
+  
+    color: var(--gray-light);
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      // align-items: center;
+      @include responsive_320 {
+        flex-direction: column;
+      }
+  
+      @include responsive_375 {
+        flex-direction: column;
+      }
+  
+      @include responsive_425 {
+        flex-direction: column;
+      }
+  
+      @include responsive_500 {
+        flex-direction: column;
+      }
+    }
+    &__left {
+      width: 48%;
+      @include responsive_320 {
+        width: 100%;
+      }
+  
+      @include responsive_375 {
+        width: 100%;
+      }
+  
+      @include responsive_425 {
+        width: 100%;
+      }
+  
+      @include responsive_500 {
+        width: 100%;
+      }
+      &--title {
+        position: relative;
+        color: var(--gray-light);
+        font-size: 1.8rem;
+        @include responsive_320 {
+          font-size: 3.2rem;
+        }
+  
+        @include responsive_375 {
+          font-size: 3.2rem;
+        }
+  
+        @include responsive_425 {
+          font-size: 3.2rem;
+        }
+  
+        @include responsive_500 {
+          font-size: 3.2rem;
+        }
+        span {
+          font-size: 2.4rem;
+          color: var(--primary-color);
+          @include responsive_320 {
+            font-size: 3.8rem;
+          }
+  
+          @include responsive_375 {
+            font-size: 3.8rem;
+          }
+  
+          @include responsive_425 {
+            font-size: 3.8rem;
+          }
+  
+          @include responsive_500 {
+            font-size: 3.8rem;
+          }
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 0.1rem;
+          width: 100%;
+          background-color: var(--primary-color);
+        }
+      }
+      &--desc {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        margin-top: 2rem;
+        @include responsive_320 {
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+        }
+  
+        @include responsive_375 {
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+        }
+  
+        @include responsive_425 {
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+        }
+  
+        @include responsive_500 {
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+        }
+      }
+      .contact {
+        &__list {
+          padding-top: 4rem;
+        }
+        &__item {
+          padding-bottom: 1.5rem;
+          display: flex;
+          // justify-content: center;
+          // align-items: center;
+          i {
+            font-size: 2.2rem;
+            margin-right: 2rem;
+            @include responsive_320 {
+              font-size: 2.8rem;
+            }
+  
+            @include responsive_375 {
+              font-size: 2.8rem;
+            }
+  
+            @include responsive_425 {
+              font-size: 2.8rem;
+            }
+  
+            @include responsive_500 {
+              font-size: 2.8rem;
+            }
+          }
+          p {
+            @include responsive_320 {
+              font-size: 1.6rem;
+            }
+  
+            @include responsive_375 {
+              font-size: 1.6rem;
+            }
+  
+            @include responsive_425 {
+              font-size: 1.6rem;
+            }
+  
+            @include responsive_500 {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+    &__right {
+      width: 48%;
+      @include responsive_320 {
+        width: 100%;
+      }
+  
+      @include responsive_375 {
+        width: 100%;
+      }
+  
+      @include responsive_425 {
+        width: 100%;
+      }
+  
+      @include responsive_500 {
+        width: 100%;
+      }
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 3rem;
+      form {
+        input {
+          outline: none;
+          width: 100%;
+          color: var(--gray-light);
+          background-color: rgba(0, 0, 0, 0.7);
+          border: none;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+          font-size: 1.3rem;
+        }
+        textarea {
+          outline: none;
+          width: 100%;
+          color: var(--gray-light);
+          background-color: rgba(0, 0, 0, 0.7);
+          border: none;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+          // height: 8rem;
+          // hoac la rows="3" ben code html : textarea
+          font-size: 1.8rem;
+        }
+        input[type="submit"] {
+          width: 20%;
+        }
+        .btn {
+          margin: 0 0;
+          background-color: var(--primary-color);
+          &:hover {
+            background-color: #0b6687;
+          }
+        }
+      }
+    }
+  }
+  // End Contact ///////////////////////////////////////////////////////////////////////////////
+  
+  
+  

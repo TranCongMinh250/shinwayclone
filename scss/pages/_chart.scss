@@ -1,0 +1,126 @@
+// --------------- CHART ---------------- //
+
+.chart {
+  background: #e5e5e5;
+  position: relative;
+  margin: 8rem 0 0;
+  min-height: 60vh;
+  @include responsive_320 {
+    background: #f8f8f8 url(../../images/chart.JPG);
+   
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 52vh;
+    margin: 0;
+  }
+  @include responsive_375 {
+    background: #f8f8f8 url(../../images/chart.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 58vh;
+    margin: 0;
+  }
+  @include responsive_425 {
+    background: #f8f8f8 url(../../images/chart.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 65vh;
+    margin: 0;
+  }
+  @include responsive_500 {
+    background: #f8f8f8 url(../../images/chart.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  @include responsive_768 {
+    background: #f8f8f8 url(../../images/chart.JPG);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    min-height: 55vh;
+    margin: 0;
+  }
+  &__content {
+    text-align: center;
+    position: relative;
+    h3 {
+      z-index: 1;
+      position: absolute;
+      top: -15px;
+      left: 27%;
+      font-size: 1.6rem;
+      @include responsive_320 {
+        top: -15px;
+        left: 10%;
+        width: 80%;
+        font-weight: bold;
+      }
+      @include responsive_375 {
+        top: -15px;
+        left: 9%;
+        width: 80%;
+        font-weight: bold;
+      }
+      @include responsive_425 {
+        top: -15px;
+        left: 9%;
+        width: 80%;
+        font-weight: bold;
+      }
+      @include responsive_500 {
+        top: -15px;
+        left: 10%;
+        width: 80%;
+        font-weight: bold;
+      }
+    }
+    &--skill {
+      position: relative;
+      display: inline-block;
+      margin: -6.6rem auto 0;
+      img {
+        @include responsive_320 {
+          display: none;
+        }
+        @include responsive_375 {
+          display: none;
+        }
+        @include responsive_425 {
+          display: none;
+        }
+        @include responsive_500 {
+          display: none;
+        }
+      }
+    }
+    &--chart {
+      display: block;
+      position: absolute;
+      top: 5%;
+      left: 27%;
+      width: 55%;
+      img {
+        width: 100%;
+      }
+      @include responsive_320 {
+        display: none;
+      }
+
+      @include responsive_375 {
+        display: none;
+      }
+
+      @include responsive_425 {
+        display: none;
+      }
+      @include responsive_500 {
+        display: none;
+      }
+    }
+  }
+}

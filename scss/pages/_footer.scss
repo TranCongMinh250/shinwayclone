@@ -1,0 +1,30 @@
+// --------------- FOOTER ---------------- //
+
+.footer {
+  text-align: center;
+  padding: 3rem 0 4rem;
+  position: relative;
+  h3 {
+    font-size: 1.4rem;
+    span {
+      color: var(--primary-color);
+    }
+  }
+  .btn {
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    width: 5rem;
+    height: 60%;
+    padding: 0.5rem 0rem 0;
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 2rem;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+      font-size: 3rem;
+    }
+  }
+}
