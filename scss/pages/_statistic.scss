@@ -2,10 +2,14 @@
 
 .statistic {
     padding: 7rem 0;
-    background-image: url(../../images/bg-statistic.jpg);
-    background-attachment: fixed;
     background-position: center center;
-    // background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(../../images/bg-statistic.jpg);
   
     &__content {
       text-align: center;

@@ -2,11 +2,14 @@
 
 .contact {
     padding: 7rem 0;
-    background-image: url(../../images/bg-contact.jpg);
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-position: center center;
-    // background-size: cover;
-  
+    background-image: url(../../images/bg-contact.jpg);
     color: var(--gray-light);
     &__content {
       display: flex;
