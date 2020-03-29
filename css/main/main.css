@@ -24,6 +24,7 @@
 *:after {
   box-sizing: border-box;
   outline: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -140,6 +141,10 @@ img {
   flex-direction: column;
   justify-content: center;
   color: var(--gray-light);
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
